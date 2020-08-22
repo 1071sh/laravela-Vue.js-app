@@ -7,6 +7,9 @@
 require("./bootstrap");
 
 window.Vue = require("vue");
+import Form from "./Form";
+
+window.Form = Form;
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,8 +23,13 @@ window.Vue = require("vue");
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component(
-    "showcategory-component",
-    require("./components/ShowCategoryComponet.vue").default
+    "show-category-component",
+    require("./components/ShowCategoryComponent.vue").default
+);
+
+Vue.component(
+    "domain-register-component",
+    require("./components/DomainRegisterComponent.vue").default
 );
 
 /**

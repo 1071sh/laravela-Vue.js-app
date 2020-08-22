@@ -24,7 +24,7 @@
                     </ul>
                     @endforeach
 
-                    <showcategory-component :categories="{{$categories}}"></showcategory-component>
+                    <show-category-component :categories="{{$categories}}"></show-category-component>
                 </div>
             </div>
         </div>
