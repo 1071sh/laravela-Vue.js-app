@@ -10925,3 +10925,27 @@ a.text-dark:focus {
   color: #ff4500 !important;
 }
 
+.categorybox {
+  border-radius: 9px;
+  border: 1px solid #3490dc;
+  background: #f8fafc;
+  box-shadow: -6px -6px 20px white, 6px 6px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.categorybox h5 {
+  margin-bottom: 0px !important;
+}
+
+.categoryboxs {
+  border-radius: 6px;
+  border: 1px solid #7babd1;
+  background: #f8fafc;
+  box-shadow: -6px -6px 20px white, 6px 6px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.categoryboxs h6 {
+  margin-bottom: 0px !important;
+}
+

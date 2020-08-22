@@ -21,5 +21,6 @@
     <div class="d-flex justify-content-center">
         <h2 class="font-weight-bolder">Categories</h2>
     </div>
+    <domain-display :domains="{{$domains}}" :categories="{{$categories}}" :subcategories="{{$subcategories}}"></domain-display>
 </div>
 @endsection
