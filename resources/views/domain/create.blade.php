@@ -6,6 +6,6 @@
             <h3 class="text-center">Add your Domain to our website and get backlink!</h3>
         </div>
     </div>
-    <domain-register-component></domain-register-component>
+    <domain-register :categories="{{$categories}}" :subcategories="{{$subcategories}}"></domain-register>
 </div>
 @endsection

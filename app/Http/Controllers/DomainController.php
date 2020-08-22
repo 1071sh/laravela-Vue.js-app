@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Domain;
+use App\Category;
+use App\Subcategory;
 use Illuminate\Http\Request;
 
 class DomainController extends Controller
@@ -24,7 +26,10 @@ class DomainController extends Controller
      */
     public function create()
     {
-        return view('domain.create');
+        $categories = Category::get();
+        $subcategories = Subcategory::get();
+        return view('domain.create')
+        ->with('categories', $categories)->with('subcategories', $subcategories);
     }
 
     /**
@@ -35,7 +40,12 @@ class DomainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email'=>'required | email',
+            'title'=>'required | max:60',
+            'url'=>'required | max:255',
+            'shortdesc'=>'required | max:150',
+        ]);
     }
 
     /**

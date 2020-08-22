@@ -1,10 +1,10 @@
 <template>
     <div>
         <h2>Hello from Vue.js</h2>
-        <div v-for="category in this.categories">
+        <div v-for="(category, key) in this.categories" :key="key">
             <h4>{{ category.categoryname }}</h4>
             <ul>
-                <li v-for="subcat in category.subcategories">
+                <li v-for="(subcat, key) in category.subcategories" :key="key">
                     {{ subcat.subcategoryname }}
                 </li>
             </ul>

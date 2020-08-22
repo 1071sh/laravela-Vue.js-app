@@ -30,7 +30,7 @@ Vue.component(
 );
 
 Vue.component(
-    "domain-register-component",
+    "domain-register",
     require("./components/DomainRegisterComponent.vue").default
 );
 
