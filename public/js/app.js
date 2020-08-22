@@ -2000,6 +2000,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["categories", "subcategories"],
   data: function data() {
@@ -2029,7 +2054,7 @@ __webpack_require__.r(__webpack_exports__);
       data.append("subcategory_id", this.form.subcategory_id);
 
       if (document.getElementById("img").files[0]) {
-        data.append("img", document.getElementById("img").file[0]);
+        data.append("img", document.getElementById("img").files[0]);
       }
 
       axios.post("/domain", data).then(function (response) {
@@ -51432,12 +51457,16 @@ var render = function() {
                 }
               ],
               staticClass: "form-control",
+              class: { "is-invalid": _vm.form.errors.has("email") },
               attrs: {
                 type: "email",
                 placeholder: "Please enter your email Address"
               },
               domProps: { value: _vm.form.email },
               on: {
+                keydown: function($event) {
+                  return _vm.form.errors.clear("email")
+                },
                 input: function($event) {
                   if ($event.target.composing) {
                     return
@@ -51445,6 +51474,19 @@ var render = function() {
                   _vm.$set(_vm.form, "email", $event.target.value)
                 }
               }
+            }),
+            _vm._v(" "),
+            _c("div", {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.form.errors.has("email"),
+                  expression: "form.errors.has('email')"
+                }
+              ],
+              staticClass: "invalid-feedback",
+              domProps: { textContent: _vm._s(_vm.form.errors.get("email")) }
             })
           ]),
           _vm._v(" "),
@@ -51511,9 +51553,13 @@ var render = function() {
               }
             ],
             staticClass: "form-control",
+            class: { "is-invalid": _vm.form.errors.has("title") },
             attrs: { type: "text" },
             domProps: { value: _vm.form.title },
             on: {
+              keydown: function($event) {
+                return _vm.form.errors.clear("title")
+              },
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -51521,6 +51567,19 @@ var render = function() {
                 _vm.$set(_vm.form, "title", $event.target.value)
               }
             }
+          }),
+          _vm._v(" "),
+          _c("div", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.form.errors.has("title"),
+                expression: "form.errors.has('title')"
+              }
+            ],
+            staticClass: "invalid-feedback",
+            domProps: { textContent: _vm._s(_vm.form.errors.get("title")) }
           })
         ]),
         _vm._v(" "),
@@ -51539,9 +51598,13 @@ var render = function() {
               }
             ],
             staticClass: "form-control",
+            class: { "is-invalid": _vm.form.errors.has("shortdesc") },
             attrs: { type: "text" },
             domProps: { value: _vm.form.shortdesc },
             on: {
+              keydown: function($event) {
+                return _vm.form.errors.clear("shortdesc")
+              },
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -51549,6 +51612,19 @@ var render = function() {
                 _vm.$set(_vm.form, "shortdesc", $event.target.value)
               }
             }
+          }),
+          _vm._v(" "),
+          _c("div", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.form.errors.has("shortdesc"),
+                expression: "form.errors.has('shortdesc')"
+              }
+            ],
+            staticClass: "invalid-feedback",
+            domProps: { textContent: _vm._s(_vm.form.errors.get("shortdesc")) }
           })
         ]),
         _vm._v(" "),
@@ -65099,15 +65175,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!*************************************************************!*\
   !*** ./resources/js/components/DomainRegisterComponent.vue ***!
   \*************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DomainRegisterComponent_vue_vue_type_template_id_25ff74ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DomainRegisterComponent.vue?vue&type=template&id=25ff74ca& */ "./resources/js/components/DomainRegisterComponent.vue?vue&type=template&id=25ff74ca&");
 /* harmony import */ var _DomainRegisterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DomainRegisterComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/DomainRegisterComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _DomainRegisterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _DomainRegisterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -65137,7 +65212,7 @@ component.options.__file = "resources/js/components/DomainRegisterComponent.vue"
 /*!**************************************************************************************!*\
   !*** ./resources/js/components/DomainRegisterComponent.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

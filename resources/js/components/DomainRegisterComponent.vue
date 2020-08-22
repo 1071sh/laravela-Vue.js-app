@@ -42,10 +42,17 @@
                     <label for="email">Email</label>
                     <input
                         type="email"
+                        :class="{ 'is-invalid': form.errors.has('email') }"
                         class="form-control"
                         placeholder="Please enter your email Address"
                         v-model="form.email"
+                        @keydown="form.errors.clear('email')"
                     />
+                    <div
+                        class="invalid-feedback"
+                        v-show="form.errors.has('email')"
+                        v-text="form.errors.get('email')"
+                    ></div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="url">Enter your Domain URL</label>
@@ -69,15 +76,33 @@
             </div>
             <div class="form-group">
                 <label for="title">Title of your Domain</label>
-                <input type="text" class="form-control" v-model="form.title" />
+                <input
+                    type="text"
+                    :class="{ 'is-invalid': form.errors.has('title') }"
+                    class="form-control"
+                    v-model="form.title"
+                    @keydown="form.errors.clear('title')"
+                />
+                <div
+                    class="invalid-feedback"
+                    v-show="form.errors.has('title')"
+                    v-text="form.errors.get('title')"
+                ></div>
             </div>
             <div class="form-group">
                 <label for="shortdesc">short description</label>
                 <input
                     type="text"
+                    :class="{ 'is-invalid': form.errors.has('shortdesc') }"
                     class="form-control"
                     v-model="form.shortdesc"
+                    @keydown="form.errors.clear('shortdesc')"
                 />
+                <div
+                    class="invalid-feedback"
+                    v-show="form.errors.has('shortdesc')"
+                    v-text="form.errors.get('shortdesc')"
+                ></div>
             </div>
             <div class="form-group">
                 <vue-editor v-model="form.desc" />
@@ -117,7 +142,7 @@ export default {
             data.append("category_id", this.form.category_id);
             data.append("subcategory_id", this.form.subcategory_id);
             if (document.getElementById("img").files[0]) {
-                data.append("img", document.getElementById("img").file[0]);
+                data.append("img", document.getElementById("img").files[0]);
             }
             axios
                 .post("/domain", data)
