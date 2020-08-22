@@ -8,8 +8,10 @@ require("./bootstrap");
 
 window.Vue = require("vue");
 import Form from "./Form";
+import Vue2Editor from "vue2-editor";
 
 window.Form = Form;
+Vue.use(Vue2Editor);
 
 /**
  * The following block of code may be used to automatically register your
