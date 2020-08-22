@@ -21,6 +21,10 @@
                     You are logged in!
                     <div class="d-flex align-items-between">
                         <a class="btn btn-success w-50 m-1" href="{{ route('category.create')}}">Add new category</a>
+                        <a class="btn btn-success w-50 m-1" href="{{ route('category.index')}}">Show categories</a>
+                    </div>
+                    <div class="d-flex align-items-between">
+                        <a class="btn btn-success w-50 m-1" href="{{ route('subcategory.create')}}">Add new subcategory</a>
                     </div>
                 </div>
             </div>
