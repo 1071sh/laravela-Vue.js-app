@@ -19,7 +19,7 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link calltoaction" href="#">Submit your domain</a>
+                    <a class="nav-link calltoaction" href="{{route('domain.create')}}">Submit your domain</a>
                 </li>
             </ul>
         </div>
