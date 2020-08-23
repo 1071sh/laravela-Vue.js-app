@@ -22,10 +22,10 @@
 <body>
     <div id="app">
         @include('layouts.navbar')
-
         <main class="py-4">
             @yield('content')
         </main>
+        @include('layouts.footer')
     </div>
 </body>
 </html>
